@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:world_time/services/world_time_api.dart';
+=======
+import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+>>>>>>> 9c4511a5e3c79b036e61b64882a335725feb9a25
 
 class ChooseLocation extends StatefulWidget {
   const ChooseLocation({Key? key}) : super(key: key);
@@ -12,6 +17,7 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+<<<<<<< HEAD
   List<WorldTime> locations = [
     WorldTime(url: 'Asia/Kolkata', location: 'Kolkata', flag: 'india.png'),
     WorldTime(url: 'Europe/Athens', location: 'Athens', flag: 'greece.png'),
@@ -67,6 +73,37 @@ class _ChooseLocationState extends State<ChooseLocation> {
           );
         }
       )
+=======
+  @override
+  int counter=0;
+  void getData() async {
+    Response response =await get('https://jsonplaceholder.typicode.com/todos/1');
+  }
+  void initState() {
+    print("funtion ran");
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    print("Build ran");
+    return Scaffold(
+      backgroundColor: Colors.grey[600],
+      body: Center(
+       child: ElevatedButton(
+         onPressed:() {
+           setState(() {
+             counter+=1;
+           });
+         }, child:Text('counter is $counter'),
+       ),
+      ),
+
+      appBar: AppBar(
+        backgroundColor: Colors.redAccent,
+        title: Text("Choose location"),
+        centerTitle: true,
+      ),
+>>>>>>> 9c4511a5e3c79b036e61b64882a335725feb9a25
     );
   }
 }
