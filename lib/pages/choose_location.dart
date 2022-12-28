@@ -27,7 +27,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     await instance.getTime();
     // wait until we get time data
     // Navigate to home screen
-    Navigator.pop(context ,{         // no need to use argument to give data to home screen becaouse we are just popping and not replacing
+    Navigator.pop(context ,{         //no need to use argument to give data to home screen becaouse we are just popping and not replacing
     'location': instance.location,
     'flag': instance.flag,
     'time':instance.time,
