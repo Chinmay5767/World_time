@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   data= data.isNotEmpty ? data : ModalRoute.of(context)?.settings.arguments as Map;
  // we get data from choose location or loading screen here
 // we could use isNotEmpty function because it is map
-    // if data variable is empty it will give data from loading page means first data or otherwise it will update data from choose location page
+    // if data variable is empty it will give data from  loading page means first data or otherwise it will update data from choose location page
   String bgImage= data['isDayTime']? 'day.jpeg':'night.jpeg';
   Color iscolor=data['isDayTime']? Colors.black:Colors.white;
   Color bgcolor=data['isDayTime']? Colors.blueAccent:Colors.black38;
